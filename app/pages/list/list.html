@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-navbar>
+		<button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>List</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="list">
+	<ion-item icon-right>
+		<ion-icon (click)="addNavigator($event,item)" itemTapped name="person-add" item-right large ></ion-icon>
+		<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+	</ion-item>
+	<ion-list>
+		<ion-item *ngFor="let item of items" icon-right [hidden]="empty" >
+			<ion-icon (click)="editNavigator($event,item)" name="create" item-right large ></ion-icon>
+			<div (click)="doAlert($event,item)">{{ item.firstname }} {{item.lastname}}</div>
+		</ion-item>
+		<ion-grid [hidden]="!empty">
+				<ion-row>
+					<ion-col style="text-align: center;">You have no records yet</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col style="text-align: center;">
+						<ion-icon name="bookmarks" isActive="false" style="font-size: 90px;"></ion-icon>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+	</ion-list>
+
+
+
+</ion-content>

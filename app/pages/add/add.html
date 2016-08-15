@@ -1,0 +1,65 @@
+<ion-header>
+	<ion-navbar>
+		<button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Add</ion-title>
+		<ion-buttons end >
+			<button (click)="add()">
+			<ion-icon name="checkmark" ></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="add">
+	<ion-list>
+
+		<ion-item>
+			<ion-label floating>AD:</ion-label>
+			<ion-input type="text" [(ngModel)]="user.firstname"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>SOYAD:</ion-label>
+			<ion-input type="text" [(ngModel)]="user.lastname"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>TELEFON</ion-label>
+			<ion-input type="text" [(ngModel)]="user.phone"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>E-MAIL:</ion-label>
+			<ion-input type="text" [(ngModel)]="user.email"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>ADRES:</ion-label>
+			<ion-input type="text" [(ngModel)]="user.address"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>KURUM:</ion-label>
+			<ion-input type="text" [(ngModel)]="user.organization"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>DOĞUM GÜNÜ:</ion-label>
+			<ion-input type="text" [(ngModel)]="user.birthday"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>NOT:</ion-label>
+			<ion-input type="text" [(ngModel)]="user.notes"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>İLİŞKİ:</ion-label>
+			<ion-input type="text" [(ngModel)]="user.relationship"></ion-input>
+		</ion-item>
+
+	</ion-list>
+</ion-content>
